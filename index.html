@@ -17,18 +17,50 @@
       padding: 1rem;
       text-align: center;
     }
-    nav {
-      background: #004d00;
+    .menu {
+      list-style: none;
       display: flex;
-      justify-content: center;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+      background-color: #f2f2f2;
     }
-    nav a {
-      color: white;
-      padding: 1rem;
+
+    .menu > li {
+      position: relative;
+    }
+
+    .menu a {
+      display: block;
+      padding: 10px 15px;
       text-decoration: none;
+      color: #333;
     }
-    nav a:hover {
-      background: #006400;
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      list-style: none;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 0;
+      margin: 0;
+      z-index: 1000;
+    }
+
+    .submenu li a {
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    .dropdown:hover .submenu {
+      display: block;
+    }
+
+    .menu li:hover > a {
+      background-color: #e0e0e0;
     }
     main {
       padding: 2rem;
@@ -48,21 +80,29 @@
   <h1>MTsN 7 Aceh Tengah</h1>
   <p>Madrasah Berprestasi dan Islami</p>
   <nav>
-    <a href="#">Beranda</a>
-    <a href="#">Profil</a>
-    <a href="#">Guru</a>
-    <a href="#">Berita</a>
-    <a href="#">Kontak</a>
+    <ul class="menu">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="profil.html">Profil</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+      <li class="dropdown">
+        <a href="#">Guru ▾</a>
+        <ul class="submenu">
+          <li><a href="http://8.215.5.213" target="_blank">RDM</a></li>
+          <li><a href="#">Jadwal</a></li>
+          <li><a href="#">Absensi</a></li>
+        </ul>
+      </li>
+    </ul>
   </nav>
  </header>
  
   <main>
     <h2>Selamat Datang</h2>
-    <p>Ini adalah situs resmi MTsN 7 Aceh Tengah. Kami berkomitmen memberikan pendidikan terbaik yang berbasis Islam dan teknologi.</p>
+    <p>Ini adalah situs resmi MTsN 7 Aceh Tengah. Kami berkomitmen memberikan pendidikan terbaik yang berbasis Islam.</p>
   </main>
 
   <footer>
-    &copy; 2025 MTsN 7 Aceh Tengah | Email: info@mtsn7acehtengah.sch.id
+    &copy; 2025 MTsN 7 Aceh Tengah | Email: mtsnjagong@gmail.com
   </footer>
 
 </body>
