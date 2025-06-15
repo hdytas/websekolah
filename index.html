@@ -13,6 +13,7 @@
       --nav-hover: #d0d0d0;
       --dropdown-bg: #f0f0f0;
       --footer-bg: #eee;
+      --logo-bg: #ffffff; /* background logo pada light mode */
     }
 
     body.dark {
@@ -23,6 +24,7 @@
       --nav-hover: #333;
       --dropdown-bg: #2a2a2a;
       --footer-bg: #1a1a1a;
+      --logo-bg: #1e1e1e; /* background logo pada dark mode */
     }
 
     * {
@@ -51,6 +53,9 @@
       width: 100px;
       border-radius: 10px;
       margin-bottom: 0.5rem;
+      background-color: var(--logo-bg); /* agar latar logo menyesuaikan tema */
+      padding: 5px;
+      transition: background-color 0.3s;
     }
 
     header h1 {
@@ -203,7 +208,6 @@
         <a href="#">Guru</a>
         <ul class="dropdown">
           <li><a href=http://8.215.5.213>RDM</a></li>
-          <li><a href=https://pusaka-v3.kemenag.go.id/login>Absensi Pusaka</a></li>
         </ul>
       </li>
       <li>
@@ -219,7 +223,7 @@
 
   <main>
     <h2>Selamat Datang</h2>
-    <p>Ini adalah situs resmi MTsN 7 Aceh Tengah. Kami berkomitmen memberikan pendidikan terbaik yang berbasis Islam.</p>
+    <p>Ini adalah situs resmi MTsN 7 Aceh Tengah. Kami berkomitmen memberikan pendidikan yang baik berasaskan Islam.</p>
   </main>
 
   <footer>
